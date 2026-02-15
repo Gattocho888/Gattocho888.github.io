@@ -6,14 +6,14 @@ const siteConfig: SiteConfig = {
     website: 'https://example.com',
     avatar: {
         src: avatar,
-        alt: 'Ethan Donovan'
+        alt: 'Nicolás Espinosa Estrada'
     },
-    title: 'Dante',
-    subtitle: 'Minimal Astro.js theme',
-    description: 'Astro.js and Tailwind CSS theme for blog and portfolio by justgoodui.com',
+    title: 'Nicolás Espinosa',
+    subtitle: 'Ingeniería de Sistemas - Universidad El Bosque',
+    description: 'Portafolio profesional de Nicolás Espinosa Estrada, enfocado en redes, infraestructura e ingeniería de sistemas.',
     image: {
         src: '/dante-preview.jpg',
-        alt: 'Dante - Astro.js and Tailwind CSS theme'
+        alt: 'Nicolás Espinosa - Portafolio'
     },
     headerNavLinks: [
         {
@@ -46,37 +46,35 @@ const siteConfig: SiteConfig = {
             text: 'Terms',
             href: '/terms'
         },
-
     ],
     socialLinks: [
         {
             text: 'Linkedin',
-            href: 'www.linkedin.com/in/nicolas-espinosa-estrada-605618343'
+            href: 'https://www.linkedin.com/in/nicolas-espinosa-estrada-605618343'
         },
         {
             text: 'Instagram',
             href: 'https://www.instagram.com/nicolas_espinosa8/?hl=es-la'
         },
-
     ],
     hero: {
-        title: 'Hi There & Welcome to My Corner of the Web!',
-        text: "I'm **Ethan Donovan**, a web developer at Amazing Studio, dedicated to the realms of collaboration and artificial intelligence.\nMy approach involves embracing intuition, conducting just enough research, and leveraging aesthetics as a catalyst for exceptional products.\nI have a profound appreciation for top-notch software, visual design, and the principles of product-led growth.\n\nFeel free to explore some of my coding endeavors on [GitHub](https://github.com/JustGoodUI/dante-astro-theme) or follow me on [Twitter/X](https://twitter.com/justgoodui).",
+        title: '¡Hola! Bienvenido a mi entorno tecnológico',
+        text: "Soy **Nicolás Espinosa Estrada**, estudiante de **Ingeniería de Sistemas en la Universidad El Bosque** (Bogotá, Colombia).\n\nMe especializo en redes, telecomunicaciones e infraestructura tecnológica. Mi enfoque está en la optimización de sistemas y la gestión de entornos críticos, buscando siempre mejorar la estabilidad operativa y la seguridad. Actualmente desarrollo habilidades avanzadas en infraestructura, bases de datos y software para ofrecer soluciones técnicas de alto impacto.",
         image: {
             src: hero,
-            alt: 'A person sitting at a desk in front of a computer'
+            alt: 'Nicolás Espinosa trabajando en infraestructura y redes'
         },
         actions: [
             {
-                text: 'Get in Touch',
-                href: '/contact'
+                text: 'Ver Proyectos',
+                href: '/projects'
             }
         ]
     },
     subscribe: {
-        enabled: true,
-        title: 'Subscribe to Dante Newsletter',
-        text: 'One update per week. All the latest posts directly in your inbox.',
+        enabled: false, // Desactivado por ahora, puedes activarlo si tienes un newsletter
+        title: 'Suscríbete a mis actualizaciones',
+        text: 'Recibe información sobre mis últimos proyectos en infraestructura y redes.',
         form: {
             action: '#'
         }
