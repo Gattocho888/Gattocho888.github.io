@@ -1,5 +1,5 @@
-import avatar from '../assets/images/avatar.jpg';
-import hero from '../assets/images/hero.jpg';
+//import avatar from '../assets/images/avatar.jpg';
+//import hero from '../assets/images/hero.jpg';
 import type { SiteConfig } from '../types';
 
 const siteConfig: SiteConfig = {
@@ -25,12 +25,12 @@ const siteConfig: SiteConfig = {
             href: '/projects'
         },
         {
-            text: 'Blog',
+            text: 'Presentación',
             href: '/blog'
         },
         {
-            text: 'Tags',
-            href: '/tags'
+            text: 'Github',
+            href: 'https://github.com/Gattocho888'
         }
     ],
     footerNavLinks: [
@@ -46,24 +46,18 @@ const siteConfig: SiteConfig = {
             text: 'Terms',
             href: '/terms'
         },
-        {
-            text: 'Download theme',
-            href: 'https://github.com/JustGoodUI/dante-astro-theme'
-        }
+
     ],
     socialLinks: [
         {
-            text: 'Dribbble',
-            href: 'https://dribbble.com/'
+            text: 'Linkedin',
+            href: 'www.linkedin.com/in/nicolas-espinosa-estrada-605618343'
         },
         {
             text: 'Instagram',
-            href: 'https://instagram.com/'
+            href: 'https://www.instagram.com/nicolas_espinosa8/?hl=es-la'
         },
-        {
-            text: 'X/Twitter',
-            href: 'https://twitter.com/'
-        }
+
     ],
     hero: {
         title: 'Hi There & Welcome to My Corner of the Web!',
