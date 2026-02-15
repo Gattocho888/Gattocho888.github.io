@@ -1,66 +1,54 @@
 ---
-title: 'EcoBuddy: Sustainable Living App'
-description: EcoBuddy is a mobile app that gamifies sustainable living. Users can set eco-friendly goals, track their carbon footprint, and earn virtual rewards for adopting environmentally conscious habits.
-publishDate: 'Jan 02 2024'
+title: 'Infraestructura Tecnológica: Dirección de Educación Policial'
+description: Ejecución de mantenimiento preventivo de misión crítica, optimización de cableado estructurado y actualización de sistemas de seguridad en datacenter.
+publishDate: 'dec 15 2025'
 seo:
   image:
     src: '../../assets/images/project-1.jpg'
-    alt: Project preview
+    alt: Mantenimiento de Datacenter - Nicolás Espinosa
 ---
 
-![Project preview](../../assets/images/project-1.jpg)
+![Mantenimiento de Datacenter](../../assets/images/project-1.jpg)
 
-**Note:** This case study is entirely fictional and created for the purpose of showcasing [Dante Astro.js theme functionality](https://justgoodui.com/astro-themes/dante/).
+**Proyecto de Infraestructura y Soporte Técnico**
 
-**Project Overview:**
-EcoBuddy is a revolutionary mobile application designed to make sustainable living accessible, engaging, and rewarding. With a focus on gamification and real-world impact, EcoBuddy encourages users to adopt eco-friendly habits, reduce their carbon footprint, and contribute to a healthier planet.
+Este proyecto consistió en la intervención integral de la infraestructura tecnológica de la **Dirección de Educación Policial**, enfocándose en garantizar la alta disponibilidad de los servicios y la integridad física del hardware del centro de datos.
 
-## Objectives
+## Objetivos del Proyecto
 
-1. Develop a user-friendly mobile app that motivates individuals to adopt sustainable practices in their daily lives.
-2. Utilize gamification elements to make sustainable living fun and interactive.
-3. Provide educational resources and personalized challenges to empower users to make informed eco-conscious decisions.
+1. **Asegurar la Continuidad:** Realizar mantenimiento preventivo profundo para evitar fallos de hardware en equipos de computo y servidores críticos.
+2. **Optimización de Capa Física:** Corregir el cableado para mejorar el flujo de aire dentro de los racks y facilitar futuras intervenciones técnicas.
+3. **Fortalecimiento de Seguridad:** Actualizar el software de seguridad para proteger la red contra vulnerabilidades recientes.
 
-## Features
+## Actividades Realizadas
 
-1. **EcoScore and Challenges:**
+1. **Mantenimiento Preventivo de Datacenter:**
+- Limpieza técnica de componentes internos en servidores y estaciones de trabajo.
+- Revisión de fuentes de poder y sistemas de ventilación.
 
-- Users are assigned an EcoScore based on their sustainable activities and choices.
-- Daily and weekly challenges encourage users to adopt new habits and compete with friends or the community to earn EcoPoints.
+2. **Gestión de Cableado y Conectividad:**
+- Corrección y peinado de cableado estructurado.
+- Implementación y configuración de soluciones **KVM** para la gestión centralizada de múltiples servidores desde una sola consola.
 
-2. **Personalized Eco-Goals:**
+3. **Actualización y Seguridad:**
+- Despliegue de parches de seguridad y actualización de firmware en equipos de red.
+- Revisión exhaustiva del estado de los equipos de cómputo periféricos.
 
-- Users can set and track personalized eco-goals, such as reducing plastic usage, conserving water, or choosing eco-friendly transportation.
-- The app provides tips and suggestions to help users achieve their goals.
+4. **Optimización de Video e Interfaz:**
+- Estandarización de conexiones mediante cables DVI para asegurar la calidad de imagen en los centros de monitoreo.
 
-3. **Green Rewards Marketplace:**
+## Stack Tecnológico y Herramientas
 
-- EcoPoints earned through challenges and sustainable actions can be redeemed in a virtual Green Rewards Marketplace.
-- The marketplace offers discounts on eco-friendly products, services, and even contributions to environmental causes.
+- **Hardware:** Sistemas de configuración de **Dell**, estaciones de trabajo de alto rendimiento.
+- **Conectividad:** Gestión de interfaces **KVM**, cables DVI de alta fidelidad, cableado UTP Cat 6A.
+- **Software:** Herramientas de diagnóstico de hardware Dell y software de gestión de seguridad institucional.
 
-4. **Community Hub:**
+## Resultado
 
-- A community feature allows users to connect, share their eco-friendly achievements, and inspire others.
-- Users can join local eco-groups, organize clean-up events, and collaborate on sustainability projects.
+La intervención permitió reducir los tiempos de respuesta del equipo técnico gracias a la nueva organización del cableado y la implementación del KVM. Además, se logró una disminución del 15% en las alertas por temperatura en los racks, asegurando un entorno operativo estable para la educación policial.
 
-5. **EcoEducator AI Assistant:**
+## Testimonio de Gestión
 
-- An AI-powered assistant, EcoEducator, provides personalized eco-tips, facts, and information based on users' preferences and habits.
-- Users can chat with EcoEducator for instant advice on sustainable living.
+> "La atención al detalle en la corrección del cableado y la actualización de los sistemas de seguridad fue fundamental para la estabilidad de nuestra red. Un trabajo técnico impecable en un entorno de misión crítica."
 
-## Technology Stack
-
-- Frontend: React Native for cross-platform mobile app development.
-- Backend: Firebase for real-time data synchronization and user authentication.
-- Database: Firestore for scalable and flexible data storage.
-- AI Integration: Dialogflow for natural language processing and conversation with EcoEducator.
-
-## Outcome
-
-EcoBuddy has successfully created a community of environmentally conscious individuals who actively participate in sustainable living practices. The app not only educates and motivates users but also provides tangible rewards for their commitment to a greener lifestyle, fostering a positive impact on the environment.
-
-## Client Testimonial
-
-> We couldn't be happier with the results delivered by Ethan Donovan. From the initial concept discussions to the final product, their responsiveness and collaborative approach were impressive. Our startup's website now stands out, thanks to their creative input and commitment to excellence.
-
-**Note:** This case study is entirely fictional and created for the purpose of showcasing [Dante Astro.js theme functionality](https://justgoodui.com/astro-themes/dante/).
+---
