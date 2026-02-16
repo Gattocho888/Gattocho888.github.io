@@ -1,64 +1,51 @@
 ---
-title: 'TimeWarp - Travel Agency Website'
-description: Explore the possibilities of time travel through an immersive website for a fictional travel agency, complete with dynamic destination timelines and interactive historical events.
-publishDate: 'Oct 2 2023'
+title: 'Infraestructura Residencial: Red Giga-Ethernet de Alta Velocidad'
+description: Diseño e implementación de una red de cableado estructurado para hogar, optimizando la conectividad de múltiples dispositivos mediante conmutación de alta velocidad.
+publishDate: 'Jan 10 2026'
 isFeatured: true
 seo:
   image:
     src: '../../assets/images/project-2.jpg'
-    alt: Project preview
+    alt: Implementación de Red Residencial - Nicolás Espinosa
 ---
 
-![Project preview](../../assets/images/project-2.jpg)
+![Implementación de Red Residencial](../../assets/images/project-2.jpg)
 
-**Note:** This case study is entirely fictional and created for the purpose of showcasing [Dante Astro.js theme functionality](https://justgoodui.com/astro-themes/dante/).
+**Proyecto de Conectividad y Redes Domésticas**
 
-**Project Overview:**
-TimeWarp Travel Agency aims to redefine the travel experience by offering an innovative and immersive online platform that explores the concept of time travel. The website combines cutting-edge technology with captivating storytelling to provide users with a unique journey through time.
+Este proyecto consistió en el diseño y despliegue de una red local (LAN) de alto rendimiento para una vivienda, eliminando las limitaciones del Wi-Fi mediante una infraestructura de cableado sólido y centralizado.
 
-> Working with Ethan Donovan was a game-changer for our online presence. Their innovative solutions and attention to detail turned our vision into a reality. The website not only looks fantastic but also functions seamlessly. A true professional who exceeded our expectations!
+## Objetivos del Proyecto
 
-## Objectives
+1. **Garantizar Velocidad Constante:** Implementar una red capaz de soportar transferencias de hasta 1 Gbps en todos los puntos de acceso.
+2. **Estética y Protección:** Utilizar la ductería interna de la vivienda para asegurar un acabado profesional y proteger la integridad del cableado.
+3. **Escalabilidad:** Configurar un núcleo de red (Switch) que permita la expansión futura de dispositivos sin pérdida de rendimiento.
 
-1. Create a visually stunning and user-friendly website that captures the essence of time travel.
-2. Integrate interactive elements to engage users and make the experience memorable.
-3. Develop a responsive design to ensure a seamless user experience across various devices.
+## Características Técnicas
 
-## Features
+1. **Infraestructura de Conmutación:**
+- Instalación de un **Switch Gigabit (10/100/1000 Mbps)** como núcleo de la red para gestionar el tráfico de datos de forma eficiente.
+- Configuración del Router principal para la segmentación básica de la red y optimización del ancho de banda.
 
-1. **Dynamic Destination Timelines:**
+2. **Cableado Estructurado Interno:**
+- Despliegue de cableado a través de tubería interna, evitando cables a la vista y reduciendo interferencias electromagnéticas.
+- Ponchado técnico de terminales **hembra (keystones)** en tomas de pared y terminales **macho (RJ45)** bajo el estándar T568B para asegurar la compatibilidad universal.
 
-- Users can explore destinations through dynamic timelines, showcasing significant historical events, cultural developments, and architectural milestones.
-- Interactive sliders allow users to navigate through different eras, providing a visual representation of the historical evolution of each location.
+3. **Conectividad Multidispositivo:**
+- Integración de 6 dispositivos críticos (Smart TVs, consolas de juegos y estaciones de trabajo) con conexión directa para latencia mínima.
 
-2. **Interactive Historical Events:**
+## Stack Tecnológico
 
-- Users can click on specific points in the timeline to reveal detailed information about key historical events related to the chosen destination.
-- Rich multimedia content, including images, videos, and articles, provides a comprehensive understanding of each event.
+- **Networking:** Switch Gigabit de 8 puertos, Router de doble banda.
+- **Capa Física:** Cable UTP Categoría 6 (optimizado para Gigabit), Jacks RJ45 Cat6.
+- **Herramientas:** Ponchadora de impacto, certificador de cables, herramientas de inserción.
 
-3. **Personalized Time Travel Planner:**
+## Resultado
 
-- A personalized planner feature enables users to create their time travel itineraries by selecting specific eras and destinations.
-- The system suggests thematic experiences, such as attending historical events or meeting famous personalities.
+La vivienda quedó equipada con una red robusta que aprovecha el 100% de la velocidad contratada por el ISP. La latencia en dispositivos de juego se redujo significativamente y se eliminaron las "zonas muertas" de conexión, proporcionando una experiencia de usuario fluida y profesional.
 
-4. **Time-Port Virtual Reality Experience:**
+## Testimonio del Cliente
 
-- For an extra layer of immersion, users can opt for the Time-Port VR experience, allowing them to virtually step into different time periods and explore the surroundings in 360 degrees.
+> "La transición de depender solo del Wi-Fi a tener una red cableada profesional fue inmediata. El trabajo en el ponchado y la configuración del switch demuestran un conocimiento profundo de cómo debe funcionar una red moderna."
 
-5. **Chronicle Explorer Blog:**
-
-- A blog section, "Chronicle Explorer," offers in-depth articles and stories about various historical periods and their impact on the destinations featured on the platform.
-- Users can engage with the content, comment, and share their own historical insights.
-
-## Technology Stack
-
-- **Frontend:** [Astro.js](https://astro.build/) for a dynamic and responsive user interface and [Tailwind CSS](https://tailwindcss.com/) for styling.
-- **Backend:** Node.js for handling server-side logic and API integration.
-- **Database:** MongoDB for efficient storage and retrieval of historical data.
-- **VR Integration:** A-Frame framework for creating immersive virtual reality experiences.
-
-## Outcome
-
-The TimeWarp Travel Agency Website successfully brings the concept of time travel to life, providing users with a captivating and educational experience. The website not only serves as a travel planning tool but also as an interactive platform that encourages users to explore and appreciate the rich tapestry of human history.
-
-**Note:** This case study is entirely fictional and created for the purpose of showcasing [Dante Astro.js theme functionality](https://justgoodui.com/astro-themes/dante/).
+---
