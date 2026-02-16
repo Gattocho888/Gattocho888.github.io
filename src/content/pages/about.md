@@ -1,43 +1,46 @@
 ---
 title: About
 seo:
-  title: About Me
-  description: Learn more about the person behind the website and embark on a journey of inspiration and shared experiences.
+  title: Sobre Mí | Nicolás Espinosa Estrada
+  description: Conoce más sobre Nicolás Espinosa Estrada, estudiante de Ingeniería de Sistemas enfocado en infraestructura, redes y seguridad tecnológica.
   image:
     src: '../../assets/images/about.jpg'
-    alt: A person sitting at a desk in front of a computer
+    alt: Nicolás Espinosa en su entorno de trabajo tecnológico
 ---
 
-![Alt text for image](../../assets/images/about.jpg)
+![Nicolás Espinosa Estrada](../../assets/images/about.jpg)
 
-**Note!:** This about page is entirely fictional and created for the purpose of showcasing [Dante Astro.js theme functionality](https://justgoodui.com/astro-themes/dante/).
+## Nicolás Espinosa Estrada - Ingeniería de Sistemas en Bogotá
 
-## Ethan Donovan - Web Developer based in Estonia
+**¡Hola! Soy Nicolás**, un apasionado estudiante de **Ingeniería de Sistemas en la Universidad El Bosque**, ubicado en la vibrante ciudad de Bogotá, Colombia. Mi enfoque profesional se centra en la arquitectura de redes, la gestión de infraestructura crítica y la implementación de soluciones tecnológicas que impulsen la eficiencia operativa.
 
-**Greetings!** I'm Ethan Donovan, a passionate web developer residing in the picturesque landscapes of [Estonia](https://en.wikipedia.org/wiki/Estonia). With a keen eye for design and a love for crafting seamless digital experiences, I bring a unique blend of creativity and technical expertise to the world of web development.
+## Habilidades y Experiencia Técnica
 
-## Skills and Expertise
+Me especializo en el diseño y mantenimiento de infraestructura física y lógica. Mi conjunto de habilidades incluye:
 
-I specialize in front-end and back-end development, utilizing the latest technologies to build responsive and user-friendly websites. My proficiency includes **HTML**, **CSS**, **JavaScript**, and frameworks such as **Astro.js** for dynamic and interactive user interfaces. On the server side, I'm well-versed in Node.js and have experience with database management systems like MongoDB.
+* **Redes y Conectividad:** Configuración de equipos **Cisco**, administración de Switches Gigabit y optimización de redes LAN.
+* **Infraestructura de Datos:** Mantenimiento preventivo en Datacenters, gestión de cableado estructurado y sistemas de configuración **Dell**.
+* **Software y Sistemas:** Administración de bases de datos, seguridad informática y desarrollo de software aplicado a la infraestructura.
+* **Gestión de Hardware:** Implementación de soluciones **KVM**, periféricos industriales y estaciones de trabajo de alto rendimiento.
 
-## Innovation and Problem-Solving
+## Enfoque en la Resolución de Problemas
 
-I thrive on solving complex problems and transforming ideas into functional, elegant websites. Whether it's optimizing performance, implementing new features, or troubleshooting issues, I approach each challenge with enthusiasm and a commitment to delivering high-quality solutions.
+Me motiva enfrentar desafíos técnicos complejos, desde la corrección de fallas físicas en un centro de datos hasta la optimización de redes privadas y públicas en entornos comerciales. Mi objetivo es transformar entornos desorganizados en sistemas estables, seguros y escalables, siempre bajo los más altos estándares de calidad.
 
-## Global Perspective, Local Impact
+## Perspectiva Profesional en Colombia
 
-Living in Estonia has not only influenced my appreciation for nature and culture but has also shaped my approach to web development. I understand the importance of creating digital solutions that resonate with local audiences while maintaining a global perspective.
+Mi experiencia trabajando en puntos clave de Bogotá, como centros comerciales y entidades oficiales, me ha permitido entender las necesidades tecnológicas del sector retail y gubernamental en Colombia. Creo firmemente que una infraestructura sólida es la base para el éxito de cualquier organización moderna.
 
-## Continuous Learning
+## Aprendizaje Continuo y Futuro
 
-The dynamic nature of the tech industry inspires me to stay up-to-date with the latest trends and advancements. I'm always eager to expand my skill set and embrace emerging technologies that enhance the functionality and aesthetics of the websites I create.
+La ingeniería es un campo en constante evolución. Por ello, sigo fortaleciendo mis conocimientos en redes, telecomunicaciones y nuevas tecnologías de servidores. Estoy comprometido con el crecimiento profesional y la adopción de herramientas emergentes que definan el futuro de la tecnología en nuestra región.
 
-## Collaboration and Communication
+## Colaboración y Comunicación
 
-I believe in the power of collaboration and effective communication. Whether working with clients, designers, or fellow developers, I value clear communication to ensure the success of every project.
+Considero que la comunicación clara es tan vital como una buena conexión de red. Valoro el trabajo en equipo y la colaboración estrecha con otros profesionales para asegurar que cada proyecto supere las expectativas técnicas y funcionales.
 
-## Get in Touch
+## Conectemos
 
-Are you looking to elevate your online presence or bring your digital ideas to life? I'd love to hear from you! Feel free to reach out for collaboration, consultation, or just a friendly chat about all things web development.
+¿Buscas optimizar tu infraestructura tecnológica o necesitas asesoría técnica para tu próximo proyecto? ¡Me encantaría conversar contigo! Estoy disponible para colaboraciones, consultorías o simplemente para hablar sobre las últimas tendencias en sistemas.
 
-_Let's build something amazing together!_
+_¡Construyamos soluciones tecnológicas de impacto juntos!_

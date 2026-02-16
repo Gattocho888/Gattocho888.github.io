@@ -2,13 +2,19 @@
 title: Get in touch
 seo:
   title: Contact
-  description: Get in touch through email or social media! Let me know how I can help.
+  description: ¡Ponte en contacto conmigo! Ya sea para proyectos de infraestructura, redes o consultas técnicas, estoy disponible para colaborar.
 ---
 
-Thank you for reaching out! Whether you have a question, a suggestion, or just want to share your thoughts, I'm all ears. Feel free to get in touch through any of the methods below:
+¡Gracias por tu interés! Ya sea que tengas una pregunta, una propuesta de proyecto o simplemente quieras compartir ideas sobre tecnología e infraestructura, estaré encantado de escucharte. Puedes contactarme a través de los siguientes métodos:
 
 _Email:_
-Feel free to drop me an email at [example@example.com](mailto:example@example.com), and I'll do my best to respond as soon as possible.
+No dudes en enviarme un correo a [nicolasespinosaestrada@gmail.com](mailto:nicolasespinosaestrada@gmail.com) y te responderé lo antes posible.
 
-_Social Media:_
-Connect with me on social media as well. Find me on [Twitter](https://twitter.com) or [LinkedIn](https://www.linkedin.com/).
+_Redes Sociales:_
+También podemos conectar a través de mis redes profesionales y personales:
+
+* **LinkedIn:** [nicolasespinosaestrada](https://www.linkedin.com/in/nicolasespinosaestrada)
+* **Instagram:** [@nicolas_espinosa8](https://www.instagram.com/nicolas_espinosa8/?hl=es-la)
+
+---
+¡Espero que podamos conectar pronto!
