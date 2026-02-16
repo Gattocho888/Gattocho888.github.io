@@ -1,64 +1,52 @@
 ---
-title: 'RoboChef - AI Powered Cooking Guide'
-description: RoboChef Recipe Assistant is a groundbreaking mobile application that leverages artificial intelligence to redefine the cooking experience.
-publishDate: 'Oct 12 2023'
+title: 'Despliegue Tecnológico: Juan Valdez (CC Parque La Colina)'
+description: Implementación integral de infraestructura IT, sistemas de punto de venta (POS) y gestión de redes inalámbricas segregadas para entorno comercial.
+publishDate: 'Feb 05 2026'
 isFeatured: true
 seo:
   image:
     src: '../../assets/images/project-3.jpg'
+    alt: Instalación tecnológica Juan Valdez - Nicolás Espinosa
 ---
 
-![Project preview](../../assets/images/project-3.jpg)
+![Infraestructura IT Retail](../../assets/images/project-3.jpg)
 
-**Note:** This case study is entirely fictional and created for the purpose of showcasing [Dante Astro.js theme functionality](https://justgoodui.com/astro-themes/dante/).
+**Proyecto de Integración Tecnológica en Sector Retail**
 
-**Project Overview:**
-RoboChef Recipe Assistant is a groundbreaking mobile application that leverages artificial intelligence to redefine the cooking experience. By combining machine learning with culinary expertise, RoboChef empowers users to explore a world of flavors, improve their cooking skills, and enjoy personalized recipe recommendations.
+Este proyecto consistió en la adecuación técnica completa de un nuevo punto de venta para **Juan Valdez** en el Centro Comercial Parque La Colina, Bogotá. Se priorizó la alta disponibilidad de las cajas registradoras y la gestión eficiente del ancho de banda para clientes y empleados.
 
-## Objectives
+## Objetivos del Proyecto
 
-1. Develop a user-friendly mobile app that utilizes AI to provide personalized recipe suggestions based on user preferences, dietary restrictions, and available ingredients.
-2. Create an interactive cooking guide that assists users with step-by-step instructions, cooking tips, and real-time assistance.
-3. Implement a smart learning system that refines recommendations over time, adapting to users' taste preferences and dietary changes.
+1. **Asegurar la Operatividad del POS:** Instalación y configuración de equipos de cómputo críticos para el proceso de facturación.
+2. **Conectividad Robusta:** Despliegue de cableado estructurado para periféricos y terminales de venta.
+3. **Gestión de Red Inalámbrica:** Implementación de un sistema Hotspot con segmentación de tráfico para garantizar la seguridad de los datos corporativos.
 
-## Features
+## Características Técnicas
 
-1. **AI-Powered Recipe Recommendations:**
+1. **Sistemas de Punto de Venta (POS):**
+- Instalación de estaciones de trabajo optimizadas para software de facturación.
+- Integración de periféricos (impresoras térmicas, lectores de código) mediante cableado organizado y protegido.
 
-- RoboChef analyzes users' taste preferences, dietary restrictions, and ingredient availability to suggest personalized recipes.
-- Machine learning algorithms continuously learn from user interactions, refining recommendations for an increasingly tailored experience.
+2. **Infraestructura de Red (Hotspot):**
+- Configuración de un **Hotspot** de doble propósito utilizando un Portal Cautivo.
+- **Red Privada:** Exclusiva para personal administrativo y transacciones, con priorización de tráfico y cifrado avanzado.
+- **Red Pública:** Acceso de alta velocidad para comensales, aislada de la red interna para evitar vulnerabilidades.
 
-2. **Ingredient Scanner and Inventory Management:**
+3. **Instalación Física:**
+- Montaje de equipos en racks y organización de cableado en puntos de atención al cliente bajo estándares de seguridad comercial.
 
-- Users can scan their pantry and refrigerator using the app's built-in ingredient scanner.
-- RoboChef provides recipe suggestions based on available ingredients and helps users manage their inventory by suggesting recipes that utilize soon-to-expire items.
+## Stack Tecnológico
 
-3. **Step-by-Step Cooking Guide:**
+- **Networking:** Router avanzado con soporte para VLANs y múltiples SSIDs, Puntos de Acceso (AP) de alta densidad.
+- **Hardware:** Equipos de cómputo corporativos, sistemas de protección de energía (UPS), cableado UTP Cat6.
+- **Configuración:** Segmentación de redes, limitación de ancho de banda por usuario en red pública.
 
-- Each recipe includes a detailed step-by-step cooking guide with interactive multimedia elements.
-- Users can watch video tutorials, view images, and receive real-time tips from RoboChef as they progress through each cooking stage.
+## Resultado
 
-4. **Nutritional Insights and Meal Planning:**
+La apertura del local se realizó con éxito, contando con un sistema de facturación estable desde el primer minuto. La red pública permite una experiencia de usuario superior, mientras que la red privada protege el flujo de datos de la operación diaria, cumpliendo con los estándares de seguridad informática requeridos.
 
-- RoboChef provides nutritional information for each recipe, helping users make informed decisions about their meals.
-- The app offers meal planning features, allowing users to create weekly menus based on dietary goals and preferences.
+## Testimonio de Operación
 
-5. **Voice-Activated Assistance:**
+> "La implementación técnica en Parque La Colina fue ágil y profesional. La separación de redes nos brinda la seguridad que necesitamos para las cajas, ofreciendo al mismo tiempo un servicio de internet excelente para nuestros clientes."
 
-- Users can interact with RoboChef using voice commands for a hands-free cooking experience.
-- The AI assistant responds to queries, provides cooking tips, and adapts recipes based on user preferences.
-
-## Technology Stack
-
-- Frontend: Flutter for a seamless cross-platform mobile app experience.
-- Backend: Django for handling server-side logic and API integration.
-- Database: PostgreSQL for efficient data storage and retrieval.
-- AI Integration: TensorFlow for machine learning models powering recipe recommendations.
-
-> Ethan Donovan possesses a rare blend of technical expertise and creative flair. They skillfully transformed our vague ideas into a visually stunning and highly functional website. The end result exceeded our expectations, and we continue to receive compliments on the design and user experience.
-
-## Outcome
-
-RoboChef Recipe Assistant has revolutionized the way users approach cooking, making it an enjoyable and educational experience. The AI-powered features not only simplify the cooking process but also contribute to users' culinary growth, creating a personalized and evolving cooking journey.
-
-**Note:** This case study is entirely fictional and created for the purpose of showcasing [Dante Astro.js theme functionality](https://justgoodui.com/astro-themes/dante/).
+---
