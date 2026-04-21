@@ -1,7 +1,7 @@
 ---
 title: 'Automatización y Objetos Programables: Procedimientos y Cursores'
 description: 'Creación de objetos persistentes en base de datos para la actualización masiva de información.'
-publishDate: 'Apr 10 2026'
+publishDate: 2026-04-10
 isFeatured: true
 ---
 
@@ -11,24 +11,18 @@ El enfoque de este proyecto es la construcción de herramientas persistentes en 
 
 ## 📦 Procedimientos y Cursores Base
 
-<details>
-  <summary><strong>1. Lógica Reutilizable: Gestión Salarial</strong></summary>
+### 1. Lógica Reutilizable: Gestión Salarial
+Desarrollo de objetos persistentes (Procedimientos Almacenados) para la actualización masiva y segura de datos sensibles.
 
-  Desarrollo de objetos persistentes para la actualización masiva y segura de datos sensibles.
+```sql
+CREATE OR REPLACE PROCEDURE upd_salary(p_id IN NUMBER, p_percent IN NUMBER) IS
+BEGIN
+  UPDATE employees SET salary = salary * (1 + p_percent/100) WHERE employee_id = p_id;
+  COMMIT;
+END;
+2. Procesamiento de Conjuntos: Cursores Parametrizados
+Iteración profesional sobre juegos de datos mediante cursores explícitos con paso de parámetros dinámicos.
 
-  ```sql
-  CREATE OR REPLACE PROCEDURE upd_salary(p_id IN NUMBER, p_percent IN NUMBER) IS
-  BEGIN
-    UPDATE employees SET salary = salary * (1 + p_percent/100) WHERE employee_id = p_id;
-    COMMIT;
-  END;
-
-  </details>
-
-<details>
-<summary><strong>2. Procesamiento de Conjuntos: Cursores Parametrizados</strong></summary>
-
-Iteración profesional sobre juegos de datos mediante cursores explícitos con paso de parámetros.
 DECLARE
   CURSOR c_dept(p_id NUMBER) IS SELECT first_name FROM employees WHERE department_id = p_id;
 BEGIN
@@ -36,5 +30,3 @@ BEGIN
     DBMS_OUTPUT.PUT_LINE('Nombre: ' || r_emp.first_name);
   END LOOP;
 END;
-
-</details>

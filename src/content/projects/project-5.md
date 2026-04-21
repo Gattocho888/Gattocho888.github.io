@@ -1,7 +1,7 @@
 ---
 title: 'Lógica Algorítmica y Control de Flujo con PL/SQL'
 description: 'Desarrollo de algoritmos matemáticos y procesamiento lógico mediante estructuras de control avanzado en Oracle.'
-publishDate: 'Mar 25 2026'
+publishDate: 2026-03-25
 isFeatured: true
 ---
 
@@ -11,40 +11,25 @@ Este proyecto demuestra la capacidad de procesar lógica compleja directamente e
 
 ## 🛠️ Estructuras de Control y Metadatos
 
-<details>
-  <summary><strong>1. Modelado Relacional: Sistema Bibliotecario</strong></summary>
+### 1. Modelado Relacional: Sistema Bibliotecario
+Diseño y creación de tablas desde cero para la gestión de activos.
 
-  ```sql
-  CREATE TABLE libros (
-      isbn VARCHAR2(20) PRIMARY KEY,
-      titulo VARCHAR2(100),
-      autor VARCHAR2(50),
-      precio NUMBER(8,2)
-  );
+```sql
+CREATE TABLE libros (
+    isbn VARCHAR2(20) PRIMARY KEY,
+    titulo VARCHAR2(100),
+    autor VARCHAR2(50),
+    precio NUMBER(8,2)
+);
 
-  </details>
-
-<details>
-<summary><strong>2. Auditoría de Esquemas</strong></summary>
-
+2. Auditoría de Esquemas
 Consulta de metadatos del diccionario de datos de Oracle para listar objetos del usuario.
-SELECT table_name FROM all_tables WHERE owner = 'NESPINOSAE';
 
-</details>
-
-<details>
-<summary><strong>3. Algoritmo de Días Primos (IF)</strong></summary>
-
-Uso de estructuras condicionales anidadas para determinar propiedades matemáticas del calendario.
 
 SELECT table_name FROM all_tables WHERE owner = 'NESPINOSAE';
-
-</details>
-
-<details>
-<summary><strong>3. Algoritmo de Días Primos (IF)</strong></summary>
-
+3. Algoritmo de Días Primos (IF)
 Uso de estructuras condicionales anidadas para determinar propiedades matemáticas del calendario.
+
 
 DECLARE
   v_dia NUMBER := TO_NUMBER(TO_CHAR(SYSDATE, 'DD'));
@@ -60,11 +45,9 @@ BEGIN
   IF v_primo THEN DBMS_OUTPUT.PUT_LINE(v_dia || ' es primo');
   ELSE DBMS_OUTPUT.PUT_LINE(v_dia || ' no es primo'); END IF;
 END;
+4. Flujo Lógico con Etiquetas (GOTO)
+Demostración técnica de redireccionamiento de flujo mediante etiquetas identificadoras.
 
-</details>
-
-<details>
-<summary><strong>4. Flujo Lógico con Etiquetas (GOTO)</strong></summary>
 
 DECLARE
   v_dia NUMBER := TO_NUMBER(TO_CHAR(SYSDATE, 'DD'));
@@ -73,14 +56,11 @@ BEGIN
   <<es_primo>> DBMS_OUTPUT.PUT_LINE(v_dia || ' es primo'); RETURN;
   <<no_primo>> DBMS_OUTPUT.PUT_LINE(v_dia || ' no es primo');
 END;
-
-</details>
-
 🧠 Algoritmos Matemáticos
-<details>
-<summary><strong>5. Generador Fibonacci (LOOP)</strong></summary>
-
+5. Generador Fibonacci (LOOP)
 Algoritmo iterativo para proyectar la sucesión de Fibonacci hasta un límite determinado.
+
+
 DECLARE
   a NUMBER := 0; b NUMBER := 1; t NUMBER;
 BEGIN
@@ -91,13 +71,9 @@ BEGIN
     b := t;
   END LOOP;
 END;
-
-</details>
-
-<details>
-<summary><strong>6. Cálculo de MCM (WHILE)</strong></summary>
-
+6. Cálculo de MCM (WHILE)
 Implementación del algoritmo de Euclides para el cálculo del Mínimo Común Múltiplo.
+
 
 DECLARE
   v_num1 NUMBER := 12; v_num2 NUMBER := 18;
@@ -109,13 +85,9 @@ BEGIN
   END LOOP;
   DBMS_OUTPUT.PUT_LINE('MCM: ' || (v_num1 * v_num2) / v_a);
 END;
+7. Proyección de Raíz Entera (FOR)
+Evaluación sistémica para encontrar si un número posee raíz cuadrada exacta en el conjunto de enteros.
 
-</details>
-
-<details>
-<summary><strong>7. Proyección de Raíz Entera (FOR)</strong></summary>
-
-Evaluación sistémica para encontrar si un número posee raíz cuadrada exacta.
 
 DECLARE
   v_x NUMBER := 25;
@@ -127,5 +99,3 @@ BEGIN
     END IF;
   END LOOP;
 END;
-
-</details>
