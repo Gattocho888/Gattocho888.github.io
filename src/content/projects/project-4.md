@@ -1,46 +1,149 @@
 ---
-title: 'Arquitectura y Extracción de Datos Relacionales (Oracle SQL)'
-description: Implementación de consultas complejas, enmascaramiento de seguridad y gestión de datos corporativos utilizando SQL y bloques anónimos en PL/SQL.
-publishDate: 'Mar 10 2026'
-isFeatured: true
-seo:
-  image:
-    src: '../../assets/images/project-4.jpg'
-    alt: Desarrollo en Oracle SQL - Nicolás Espinosa
----
+title: 'Arquitectura y Extracción de Datos Relacionales (Oracle SQL)' description: Implementación de consultas complejas, enmascaramiento de seguridad y gestión de datos corporativos utilizando SQL. publishDate: 'Mar 10 2026' isFeatured: true seo: image: src: 'https://www.google.com/search?q=../../assets/images/project-4.jpg' alt: Desarrollo en Oracle SQL
 
-![Desarrollo en Oracle SQL](../../assets/images/project-4.jpg)
+Proyecto de Desarrollo y Gestión de Bases de Datos
 
-**Proyecto de Desarrollo y Gestión de Bases de Datos**
+Este proyecto documenta la creación de consultas relacionales y la manipulación segura de datos corporativos utilizando Oracle y programación estructurada. Incluye desde la validación de entornos hasta consultas multitabla de alta complejidad.
 
-Este proyecto se centró en la creación de consultas relacionales avanzadas y la manipulación segura de datos corporativos (como información de Recursos Humanos) utilizando el motor de base de datos Oracle y programación PL/SQL.
+📌 Fundamentos y Estructuras Base
 
-## Objetivos del Proyecto
+<details>
+<summary><strong>1. Mi Primer Script PL/SQL: Saludo al Entorno</strong></summary>
 
-1. **Extracción Precisa:** Desarrollar consultas multitabla (JOINs) para la geolocalización de salarios y análisis de rotación de personal.
-2. **Seguridad de la Información:** Implementar enmascaramiento de datos sensibles (correos electrónicos) en reportes jerárquicos.
-3. **Optimización de Memoria:** Utilizar anclaje de tipos (`%TYPE` y `%ROWTYPE`) para garantizar la consistencia en la extracción de registros.
+BEGIN
+  DBMS_OUTPUT.PUT_LINE('Hola Mundo PL/SQL');
+END;
 
-## Características Técnicas
 
-1. **Consultas Multitabla y Análisis:**
-   - Creación de scripts para filtrar nóminas por región geográfica cruzando múltiples entidades (`employees`, `departments`, `locations`, `countries`).
-   - Identificación de talento interno mediante el conteo de roles históricos (`GROUP BY`, `HAVING`).
+</details>
 
-2. **Estructura Organizacional y Seguridad:**
-   - Desarrollo de una consulta jerárquica (`START WITH`, `CONNECT BY PRIOR`) combinada con funciones de cadena para ocultar caracteres de correos corporativos.
+<details>
+<summary><strong>2. Análisis de Rotación: Empleados con Múltiples Roles</strong></summary>
 
-3. **Gestión de Respaldos (CTAS):**
-   - Automatización de respaldos físicos de tablas filtradas por departamentos para asegurar la disponibilidad ante fallos.
+SELECT employee_id, COUNT(*) AS total_roles
+FROM job_history
+GROUP BY employee_id
+HAVING COUNT(*) > 1;
 
-## Stack Tecnológico
 
-- **Motor de Base de Datos:** Oracle Database.
-- **Lenguajes:** SQL (DML, DDL), PL/SQL (Bloques anónimos).
-- **Técnicas:** JOINs avanzados, funciones de agregación, variables ancladas (`%TYPE`, `%ROWTYPE`).
+</details>
 
-## Resultado
+<details>
+<summary><strong>3. Lógica Base: Declaración de Variables</strong></summary>
 
-Se logró estandarizar un conjunto de scripts reutilizables que optimizan el tiempo de respuesta en la generación de reportes gerenciales. Además, la implementación del enmascaramiento de datos cumplió con las normativas de visualización segura de la información del personal.
+DECLARE
+  v_test VARCHAR2(20) := 'Nicolas Dev';
+BEGIN
+  DBMS_OUTPUT.PUT_LINE('Valor: ' || v_test);
+END;
 
----
+
+</details>
+
+<details>
+<summary><strong>4. Extracción Directa: Consulta de Perfiles</strong></summary>
+
+DECLARE
+  v_fname employees.first_name%TYPE;
+  v_lname employees.last_name%TYPE;
+BEGIN
+  SELECT first_name, last_name INTO v_fname, v_lname 
+  FROM employees WHERE employee_id = 100;
+  DBMS_OUTPUT.PUT_LINE(v_fname || ' ' || v_lname);
+END;
+
+
+</details>
+
+<details>
+<summary><strong>5. Automatización de Tipado y Entidades (%TYPE / %ROWTYPE)</strong></summary>
+
+-- Uso de %TYPE
+DECLARE
+  v_sal employees.salary%TYPE;
+BEGIN
+  SELECT salary INTO v_sal FROM employees WHERE employee_id = 120;
+END;
+
+-- Uso de %ROWTYPE
+DECLARE
+  v_emp_rec employees%ROWTYPE;
+BEGIN
+  SELECT * INTO v_emp_rec FROM employees WHERE employee_id = 105;
+  DBMS_OUTPUT.PUT_LINE(v_emp_rec.email);
+END;
+
+
+</details>
+
+<details>
+<summary><strong>6. Modelado Relacional y Clonación de Estructuras</strong></summary>
+
+-- Clonación rápida (CTAS)
+CREATE TABLE emp_backup AS 
+SELECT * FROM employees WHERE department_id = 80;
+
+-- Creación desde cero
+CREATE TABLE libros (
+    isbn VARCHAR2(20) PRIMARY KEY,
+    titulo VARCHAR2(100),
+    autor VARCHAR2(50),
+    precio NUMBER(8,2)
+);
+
+-- Auditoría de metadatos
+SELECT table_name FROM all_tables WHERE owner = 'NESPINOSAE';
+
+
+</details>
+
+🚀 Consultas Avanzadas y Enmascaramiento
+
+<details>
+<summary><strong>7. Query 01: Rotación de Cargos en la Compañía</strong></summary>
+
+Consulta avanzada para identificar cuántos empleados han pasado por más de un cargo históricamente.
+
+/* AUTOR: Nicolas Espinosa Estrada */
+SELECT E.FIRST_NAME, H.EMPLOYEE_ID, COUNT(*) AS job_count
+FROM HR.JOB_HISTORY H JOIN HR.EMPLOYEES E
+ON H.EMPLOYEE_ID = E.EMPLOYEE_ID
+GROUP BY E.FIRST_NAME, H.EMPLOYEE_ID
+HAVING COUNT (*) > 1;
+
+
+</details>
+
+<details>
+<summary><strong>8. Query 02: Filtro de Nómina en Europa (Geolocalización)</strong></summary>
+
+Identificación de empleados que trabajan en Europa con un salario entre 4000 y 6000 dólares mediante múltiples JOINs.
+
+/* AUTOR: Nicolas Espinosa Estrada */
+SELECT CONCAT (E.FIRST_NAME, ' ', E.LAST_NAME) AS NAME, C.COUNTRY_NAME AS COUNTRY, E.SALARY
+FROM HR.EMPLOYEES E JOIN HR.DEPARTMENTS D
+ON E.DEPARTMENT_ID = D.DEPARTMENT_ID
+JOIN HR.LOCATIONS L ON L.LOCATION_ID = D.LOCATION_ID
+JOIN HR.COUNTRIES C ON L.COUNTRY_ID = C.COUNTRY_ID
+WHERE C.REGION_ID = 10 AND E.SALARY BETWEEN 4000 AND 6000;
+
+
+</details>
+
+<details>
+<summary><strong>9. Query 03: Orden Jerárquico y Seguridad de Datos</strong></summary>
+
+Proyección del orden jerárquico extrayendo correos y aplicando un relleno de seguridad (asteriscos).
+
+/* AUTOR: Nicolas Espinosa Estrada */
+SELECT 
+    E.FIRST_NAME || ' ' || E.LAST_NAME AS EMPLEADO,
+    LPAD(SUBSTR(E.EMAIL, 1, 3), 9, '*') AS EMAIL_EMPLEADO,
+    M.FIRST_NAME || ' ' || M.LAST_NAME AS JEFE,
+    LPAD(SUBSTR(M.EMAIL, 1, 3), 9, '*') AS EMAIL_JEFE
+FROM HR.EMPLOYEES E
+LEFT JOIN HR.EMPLOYEES M ON E.MANAGER_ID = M.EMPLOYEE_ID
+ORDER BY E.LAST_NAME;
+
+
+</details>
