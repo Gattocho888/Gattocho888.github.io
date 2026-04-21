@@ -1,30 +1,35 @@
 ---
-title: 'Arquitectura y Extracción de Datos Relacionales (Oracle SQL)' description: Implementación de consultas complejas, enmascaramiento de seguridad y gestión de datos corporativos utilizando SQL. publishDate: 'Mar 10 2026' isFeatured: true seo: image: src: 'https://www.google.com/search?q=../../assets/images/project-4.jpg' alt: Desarrollo en Oracle SQL
+title: 'Arquitectura y Extracción de Datos Relacionales (Oracle SQL)'
+description: 'Implementación de consultas complejas, enmascaramiento de seguridad y gestión de datos corporativos utilizando SQL.'
+publishDate: 'Mar 10 2026'
+isFeatured: true
+---
 
-Proyecto de Desarrollo y Gestión de Bases de Datos
+**Proyecto de Desarrollo y Gestión de Bases de Datos**
 
-Este proyecto documenta la creación de consultas relacionales y la manipulación segura de datos corporativos utilizando Oracle y programación estructurada. Incluye desde la validación de entornos hasta consultas multitabla de alta complejidad.
+Este proyecto documenta la evolución desde la validación de entornos hasta la creación de consultas relacionales de alta complejidad y la manipulación segura de datos corporativos.
 
-📌 Fundamentos y Estructuras Base
-
-<details>
-<summary><strong>1. Mi Primer Script PL/SQL: Saludo al Entorno</strong></summary>
-
-BEGIN
-  DBMS_OUTPUT.PUT_LINE('Hola Mundo PL/SQL');
-END;
-
-
-</details>
+## 📌 Fundamentos y Estructuras Base
 
 <details>
-<summary><strong>2. Análisis de Rotación: Empleados con Múltiples Roles</strong></summary>
+  <summary><strong>1. Saludo al Entorno PL/SQL</strong></summary>
+
+  ```sql
+  BEGIN
+    DBMS_OUTPUT.PUT_LINE('Hola Mundo PL/SQL');
+  END;
+
+  </details>
+
+<details>
+<summary><strong>2. Análisis de Rotación de Personal</strong></summary>
+
+Consulta SQL avanzada para identificar talentos que han ocupado más de un cargo histórico en la empresa.
 
 SELECT employee_id, COUNT(*) AS total_roles
 FROM job_history
 GROUP BY employee_id
 HAVING COUNT(*) > 1;
-
 
 </details>
 
@@ -32,17 +37,33 @@ HAVING COUNT(*) > 1;
 <summary><strong>3. Lógica Base: Declaración de Variables</strong></summary>
 
 DECLARE
-  v_test VARCHAR2(20) := 'Nicolas Dev';
+  v_test VARCHAR2(20) := 'Nando Dev';
 BEGIN
   DBMS_OUTPUT.PUT_LINE('Valor: ' || v_test);
 END;
 
-
 </details>
 
 <details>
-<summary><strong>4. Extracción Directa: Consulta de Perfiles</strong></summary>
+<summary><strong>4. Geolocalización Salarial</strong></summary>
 
+Consulta relacional multitabla (JOINs) para filtrar empleados por región geográfica y rango de ingresos.
+
+SELECT e.first_name, e.salary, r.region_name
+FROM employees e
+JOIN departments d ON e.department_id = d.department_id
+JOIN locations l ON d.location_id = l.location_id
+JOIN countries c ON l.country_id = c.country_id
+JOIN regions r ON c.region_id = r.region_id
+WHERE r.region_name = 'Europe' AND e.salary BETWEEN 5000 AND 10000;
+
+</details>
+
+🚀 Manejo de Datos y Atributos
+<details>
+<summary><strong>5. Extracción Directa: Perfiles</strong></summary>
+
+Implementación de SELECT INTO para recuperar e inyectar datos en variables locales.
 DECLARE
   v_fname employees.first_name%TYPE;
   v_lname employees.last_name%TYPE;
@@ -52,20 +73,31 @@ BEGIN
   DBMS_OUTPUT.PUT_LINE(v_fname || ' ' || v_lname);
 END;
 
+</details>
+
+<details>
+<summary><strong>6. Estructura Organizacional y Enmascaramiento</strong></summary>
+
+Generación de reporte jerárquico con enmascaramiento selectivo de correos electrónicos.
+SELECT LPAD(' ', 2*(LEVEL-1)) || first_name AS empleado,
+       RPAD(SUBSTR(email, 1, 2), LENGTH(email), '*') AS email_hidden
+FROM employees
+START WITH manager_id IS NULL
+CONNECT BY PRIOR employee_id = manager_id;
 
 </details>
 
 <details>
-<summary><strong>5. Automatización de Tipado y Entidades (%TYPE / %ROWTYPE)</strong></summary>
+<summary><strong>7. Automatización de Tipado y Entidades (%TYPE / %ROWTYPE)</strong></summary>
 
--- Uso de %TYPE
+-- Uso de %TYPE para consistencia de datos
 DECLARE
   v_sal employees.salary%TYPE;
 BEGIN
   SELECT salary INTO v_sal FROM employees WHERE employee_id = 120;
 END;
 
--- Uso de %ROWTYPE
+-- Uso de %ROWTYPE para captura de filas completas
 DECLARE
   v_emp_rec employees%ROWTYPE;
 BEGIN
@@ -73,77 +105,12 @@ BEGIN
   DBMS_OUTPUT.PUT_LINE(v_emp_rec.email);
 END;
 
-
 </details>
 
 <details>
-<summary><strong>6. Modelado Relacional y Clonación de Estructuras</strong></summary>
+<summary><strong>8. Gestión de Respaldos (CTAS)</strong></summary>
 
--- Clonación rápida (CTAS)
 CREATE TABLE emp_backup AS 
 SELECT * FROM employees WHERE department_id = 80;
-
--- Creación desde cero
-CREATE TABLE libros (
-    isbn VARCHAR2(20) PRIMARY KEY,
-    titulo VARCHAR2(100),
-    autor VARCHAR2(50),
-    precio NUMBER(8,2)
-);
-
--- Auditoría de metadatos
-SELECT table_name FROM all_tables WHERE owner = 'NESPINOSAE';
-
-
-</details>
-
-🚀 Consultas Avanzadas y Enmascaramiento
-
-<details>
-<summary><strong>7. Query 01: Rotación de Cargos en la Compañía</strong></summary>
-
-Consulta avanzada para identificar cuántos empleados han pasado por más de un cargo históricamente.
-
-/* AUTOR: Nicolas Espinosa Estrada */
-SELECT E.FIRST_NAME, H.EMPLOYEE_ID, COUNT(*) AS job_count
-FROM HR.JOB_HISTORY H JOIN HR.EMPLOYEES E
-ON H.EMPLOYEE_ID = E.EMPLOYEE_ID
-GROUP BY E.FIRST_NAME, H.EMPLOYEE_ID
-HAVING COUNT (*) > 1;
-
-
-</details>
-
-<details>
-<summary><strong>8. Query 02: Filtro de Nómina en Europa (Geolocalización)</strong></summary>
-
-Identificación de empleados que trabajan en Europa con un salario entre 4000 y 6000 dólares mediante múltiples JOINs.
-
-/* AUTOR: Nicolas Espinosa Estrada */
-SELECT CONCAT (E.FIRST_NAME, ' ', E.LAST_NAME) AS NAME, C.COUNTRY_NAME AS COUNTRY, E.SALARY
-FROM HR.EMPLOYEES E JOIN HR.DEPARTMENTS D
-ON E.DEPARTMENT_ID = D.DEPARTMENT_ID
-JOIN HR.LOCATIONS L ON L.LOCATION_ID = D.LOCATION_ID
-JOIN HR.COUNTRIES C ON L.COUNTRY_ID = C.COUNTRY_ID
-WHERE C.REGION_ID = 10 AND E.SALARY BETWEEN 4000 AND 6000;
-
-
-</details>
-
-<details>
-<summary><strong>9. Query 03: Orden Jerárquico y Seguridad de Datos</strong></summary>
-
-Proyección del orden jerárquico extrayendo correos y aplicando un relleno de seguridad (asteriscos).
-
-/* AUTOR: Nicolas Espinosa Estrada */
-SELECT 
-    E.FIRST_NAME || ' ' || E.LAST_NAME AS EMPLEADO,
-    LPAD(SUBSTR(E.EMAIL, 1, 3), 9, '*') AS EMAIL_EMPLEADO,
-    M.FIRST_NAME || ' ' || M.LAST_NAME AS JEFE,
-    LPAD(SUBSTR(M.EMAIL, 1, 3), 9, '*') AS EMAIL_JEFE
-FROM HR.EMPLOYEES E
-LEFT JOIN HR.EMPLOYEES M ON E.MANAGER_ID = M.EMPLOYEE_ID
-ORDER BY E.LAST_NAME;
-
 
 </details>

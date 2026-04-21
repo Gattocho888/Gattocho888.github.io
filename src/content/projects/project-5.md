@@ -1,16 +1,54 @@
+-----
+### 2\. Archivo: `project-5.md`
+
 ---
-title: 'Lógica Algorítmica y Control de Flujo con PL/SQL' description: Desarrollo de algoritmos matemáticos y procesamiento lógico en base de datos mediante estructuras de control avanzado en Oracle. publishDate: 'Mar 25 2026' seo: image: src: 'https://www.google.com/search?q=../../assets/images/project-5.jpg' alt: Lógica Algorítmica PL/SQL
+title: 'Lógica Algorítmica y Control de Flujo con PL/SQL'
+description: 'Desarrollo de algoritmos matemáticos y procesamiento lógico mediante estructuras de control avanzado en Oracle.'
+publishDate: 'Mar 25 2026'
+isFeatured: true
+---
 
-Proyecto de Lógica Computacional en Base de Datos
+**Proyecto de Lógica Computacional en Base de Datos**
 
-Este proyecto demuestra la capacidad de trasladar lógica de programación compleja directamente al motor de la base de datos mediante PL/SQL, reduciendo la latencia y optimizando cálculos matemáticos.
+Este proyecto demuestra la capacidad de procesar lógica compleja directamente en el motor de base de datos mediante estructuras condicionales, bucles y algoritmos matemáticos.
 
-🛠️ Control de Flujo Básico
+## 🛠️ Estructuras de Control y Metadatos
 
 <details>
-<summary><strong>1. Validación de Cómputo: Días Primos y Saltos (GOTO)</strong></summary>
+  <summary><strong>1. Modelado Relacional: Sistema Bibliotecario</strong></summary>
 
--- Algoritmo Días Primos
+  ```sql
+  CREATE TABLE libros (
+      isbn VARCHAR2(20) PRIMARY KEY,
+      titulo VARCHAR2(100),
+      autor VARCHAR2(50),
+      precio NUMBER(8,2)
+  );
+
+  </details>
+
+<details>
+<summary><strong>2. Auditoría de Esquemas</strong></summary>
+
+Consulta de metadatos del diccionario de datos de Oracle para listar objetos del usuario.
+SELECT table_name FROM all_tables WHERE owner = 'NESPINOSAE';
+
+</details>
+
+<details>
+<summary><strong>3. Algoritmo de Días Primos (IF)</strong></summary>
+
+Uso de estructuras condicionales anidadas para determinar propiedades matemáticas del calendario.
+
+SELECT table_name FROM all_tables WHERE owner = 'NESPINOSAE';
+
+</details>
+
+<details>
+<summary><strong>3. Algoritmo de Días Primos (IF)</strong></summary>
+
+Uso de estructuras condicionales anidadas para determinar propiedades matemáticas del calendario.
+
 DECLARE
   v_dia NUMBER := TO_NUMBER(TO_CHAR(SYSDATE, 'DD'));
   v_primo BOOLEAN := TRUE;
@@ -26,7 +64,11 @@ BEGIN
   ELSE DBMS_OUTPUT.PUT_LINE(v_dia || ' no es primo'); END IF;
 END;
 
--- Salto Lógico GOTO
+</details>
+
+<details>
+<summary><strong>4. Flujo Lógico con Etiquetas (GOTO)</strong></summary>
+
 DECLARE
   v_dia NUMBER := TO_NUMBER(TO_CHAR(SYSDATE, 'DD'));
 BEGIN
@@ -35,85 +77,58 @@ BEGIN
   <<no_primo>> DBMS_OUTPUT.PUT_LINE(v_dia || ' no es primo');
 END;
 
-
 </details>
 
-🧠 Algoritmos Matemáticos Avanzados
-
+🧠 Algoritmos Matemáticos
 <details>
-<summary><strong>2. Serie Fibonacci hasta 100</strong></summary>
+<summary><strong>5. Generador Fibonacci (LOOP)</strong></summary>
 
-Bloque anónimo en PL/SQL para generar la serie de Fibonacci de manera iterativa hasta un límite determinado.
-
-/* AUTOR: Nicolas Espinosa Estrada
-FECHA: 18/02/2026
-DESCRIPCIÓN: Bloque anónimo en PL/SQL para generar la serie de Fibonacci hasta el límite de 100.
-*/
+Algoritmo iterativo para proyectar la sucesión de Fibonacci hasta un límite determinado.
 DECLARE
-    vn_a NUMBER := 0;
-    vn_b NUMBER := 1;
+  a NUMBER := 0; b NUMBER := 1; t NUMBER;
 BEGIN
-    WHILE vn_a <= 100 LOOP
-        dbms_output.put_line(vn_a);
-        vn_b := vn_a + vn_b;  
-        vn_a := vn_b - vn_a; 
-    END LOOP;
+  LOOP
+    EXIT WHEN a > 1000;
+    DBMS_OUTPUT.PUT_LINE(a);
+    t := a + b; a := b;
+    b := t;
+  END LOOP;
 END;
-/
-
 
 </details>
 
 <details>
-<summary><strong>3. Mínimo Común Múltiplo (MCM) Iterativo</strong></summary>
+<summary><strong>6. Cálculo de MCM (WHILE)</strong></summary>
 
-Cálculo del menor múltiplo común mediante un proceso iterativo con PL/SQL, utilizando el operador MOD y la función GREATEST.
+Implementación del algoritmo de Euclides para el cálculo del Mínimo Común Múltiplo.
 
-/* AUTOR: Nicolas Espinosa Estrada
-FECHA: 18/02/2026
-DESCRIPCIÓN: Bloque PL/SQL para encontrar el Mínimo Común Múltiplo (MCM) de forma iterativa.
-*/
-DECLARE 
-    vn_num1   NUMBER := 12;
-    vn_num2   NUMBER := 18;
-    vn_mcm    NUMBER := GREATEST(vn_num1, vn_num2); 
-    vb_x      BOOLEAN := TRUE;
-BEGIN 
-    WHILE vb_x LOOP
-        IF (MOD(vn_mcm, vn_num1) = 0) AND (MOD(vn_mcm, vn_num2) = 0) THEN
-            dbms_output.put_line('El MCM de ' || vn_num1 || ' y ' || vn_num2 || ' es: ' || vn_mcm);
-            vb_x := FALSE; 
-        ELSE
-            vn_mcm := vn_mcm + 1;
-        END IF;
-    END LOOP; 
+DECLARE
+  v_num1 NUMBER := 12; v_num2 NUMBER := 18;
+  v_a NUMBER := v_num1; v_b NUMBER := v_num2;
+BEGIN
+  WHILE v_b != 0 LOOP
+    v_a := MOD(v_a, v_b);
+    SELECT v_a, v_b INTO v_b, v_a FROM dual;
+  END LOOP;
+  DBMS_OUTPUT.PUT_LINE('MCM: ' || (v_num1 * v_num2) / v_a);
 END;
-/
-
 
 </details>
 
 <details>
-<summary><strong>4. Raíz Cuadrada Entera por Búsqueda Exhaustiva</strong></summary>
+<summary><strong>7. Proyección de Raíz Entera (FOR)</strong></summary>
 
-Búsqueda exhaustiva mediante un ciclo FOR para identificar la raíz entera exacta de un número.
+Evaluación sistémica para encontrar si un número posee raíz cuadrada exacta.
 
-/* AUTOR: Nicolas Espinosa Estrada
-FECHA: 18/02/2026 
-DESCRIPCIÓN: Bloque PL/SQL que utiliza un ciclo FOR para encontrar la raíz cuadrada entera.
-*/
-DECLARE 
-    vn_x NUMBER := 64;
-BEGIN 
-    FOR i IN 1..vn_x LOOP
-        IF i * i = vn_x THEN
-            dbms_output.put_line(i);
-            RETURN; 
-        END IF;
-    END LOOP;
-    dbms_output.put_line('No hay raíz entera');
+DECLARE
+  v_x NUMBER := 25;
+BEGIN
+  FOR i IN 1..v_x LOOP
+    IF i * i = v_x THEN
+      DBMS_OUTPUT.PUT_LINE('Raíz entera: ' || i);
+      EXIT;
+    END IF;
+  END LOOP;
 END;
-/
-
 
 </details>
