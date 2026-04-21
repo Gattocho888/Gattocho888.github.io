@@ -1,6 +1,3 @@
------
-### 2\. Archivo: `project-5.md`
-
 ---
 title: 'Lógica Algorítmica y Control de Flujo con PL/SQL'
 description: 'Desarrollo de algoritmos matemáticos y procesamiento lógico mediante estructuras de control avanzado en Oracle.'

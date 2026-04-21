@@ -1,8 +1,3 @@
------
-
-### 3\. Archivo: `project-6.md`
-
-````markdown
 ---
 title: 'Automatización y Objetos Programables: Procedimientos y Cursores'
 description: 'Creación de objetos persistentes en base de datos para la actualización masiva de información.'
